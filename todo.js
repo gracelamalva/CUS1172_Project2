@@ -1,23 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
+    var tasks = [];
     document.querySelector('#new-task').onsubmit = function (event){
         event.preventDefault();
         const li = document.createElement('li');
-        var tasks = [];
+        
 
         let task_text = document.querySelector('#task-title').value;
         let task_priority = document.querySelector('#task-priority').value;
-        let task_status = document.querySelector('task-status').value;
+        let task_status;// = document.querySelectorAll('name[task-status]').value;
+        let task_status_inputs = document.querySelectorAll('[name=task-status]');
 
-        let new_task_html = ` <span> ${task_text} </span>    <span> ${task_priority} </span> <span> ${task_status} </span>
+        for (let i = 0; i< task_status_inputs.length;i++){
+            if (task_status_inputs[i].getAttribute('checked') != null){
+                task_status = task_status_inputs[i].value;
+            }
+        }
+
+        let new_task_html = ` <span> ${task_text} </span>    <span>|  ${task_priority} </span> <span> | ${task_status} </span>
         
         <button class = "mark-complete"> Mark as Complete </button> <button class = "remove"> Remove </button>`;
         //let new_task_priority = ` <span> ${task_priority} </span>`;
         //let new_task_status =  `<span> ${task_status} </span>`;
 
-        li.innerHTML = new_task_html;
+        li.innerHTML = new_task_html
 
         //li.innerHTML = document.querySelector('#task').value;
-        tasks.append(task_text);
+        tasks.push(task_text);
         document.querySelector('#task_list').append(li);
         document.querySelector('#task-title').value = '';
 
@@ -31,13 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
          element.parentElement.remove();
          tasks.remove(element);
      }
-     if (element.className === 'complete'){
-         element.task_status = "complete";
+     if (element.className === 'mark-complete'){
+         //document.querySelector('#task-title').strike();
+         document.querySelector('#task-title').style.textDecoration = "line-through";
+         element.task_status = "completed";
      }
  })
 
- document.querySelector('#mark-complete').onclick = function() {
-    document.querySelector('#task-title').strike();
-}
 
  });
