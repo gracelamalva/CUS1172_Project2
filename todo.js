@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        let new_task_html = ` <span> ${task_text} </span>    <span>|  ${task_priority} </span> <span> | ${task_status} </span>
+        let new_task_html = `<div class = "new-task-html"> <span> ${task_text} </span>    <span>|  ${task_priority} </span> <span> | ${task_status} </span> </div>
         
         <button class = "mark-complete"> Mark as Complete </button> <button class = "remove"> Remove </button>`;
         //let new_task_priority = ` <span> ${task_priority} </span>`;
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
      }
      if (element.className === 'mark-complete'){
          //document.querySelector('#task-title').strike();
-         document.querySelector('#task-title').style.textDecoration = "line-through";
+         document.querySelector('.new-task-html').style.textDecoration = "line-through";
          element.task_status = "completed";
      }
  })
