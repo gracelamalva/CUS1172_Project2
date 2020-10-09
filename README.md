@@ -21,8 +21,8 @@ Your implementation should address the following requirements:
 6. Programmatically register events to handle the remove and mark as complete.
 7. When removing a task, remove it both from the array and the DOM.
 8. When marking a task as complete, have that task shown as strike-through, by programmatically updating its CSS styles (for example, set the text-decoration property).
-9. Use HTML, CSS and Bootstrap to style your page. Your styling of the task-list page must be visually appealing and the content of the page must be relevant to this assignment.
+9. Use HTML, CSS and Bootstrap to style your page. Your styling of the task-list page must be visually appealing and the content of the page must be relevant to this assignment. xxxxxxxxxxxxxxxx
 10. Your HTML page, the CSS styling and your separate javascript file, along with any other resources you might use (ie. images) must be hosted on github-pages and be accessible through the web. Store all files for this assignment under a subfolder called "Assignment02" under your main repository.
-Deliverable
+Deliverable xxxxxxxxxx
 
 Refer to your course LMS for submission instructions.
