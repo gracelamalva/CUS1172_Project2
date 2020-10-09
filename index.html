@@ -1,0 +1,33 @@
+<!DOCTYPE html5>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <script src = "todo.js"> </script>
+        <title>To do list</title>
+    </head>
+
+    <body>
+        <h1>To do List</h1>
+        <ul id = "task_list">
+
+        </ul>
+        <form id = "new-task">New Task
+            <input id = "task-title" autocomplete="off" autofocus placeholder="New Task" type = "text">
+
+            <label for = "task-priority">Task Priority</label>
+            <select name = "task-priority" id = "task-priority">
+                <option value="low">low</option>
+                <option value="med">med</option>
+                <option value="high">high</option>
+            </select>
+
+            <label for = "task-status">Task Status</label>
+            <input name = "task-status"   type = "radio" value = "pending"> Pending
+            <input name = "task-status"   type = "radio" value = "completed"> Completed
+           
+
+
+            <input id = "submit" type = "submit">
+        </form>
+    </body>
+</html>
