@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let task_priority = document.querySelector('#task-priority').value;
         let task_status = document.querySelector('task-status').value;
 
-        let new_task_html = ` <span> ${task_text} </span>    <button class = "remove"> Remove </button>`;
-        let new_task_priority = ` <span> ${task_priority} </span>`;
-        let new_task_status =  `<span> ${task_status} </span>`;
+        let new_task_html = ` <span> ${task_text} </span>    <span> ${task_priority} </span> <span> ${task_status} </span> <button class = "remove"> Remove </button>`;
+        //let new_task_priority = ` <span> ${task_priority} </span>`;
+        //let new_task_status =  `<span> ${task_status} </span>`;
 
         li.innerHTML = new_task_html;
 
