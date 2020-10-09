@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let task_status_inputs = document.querySelectorAll('[name=task-status]');
 
         for (let i = 0; i< task_status_inputs.length;i++){
-            if (task_status_inputs[i].getAttribute('checked') != null){
+            if (task_status_inputs[i].checked){
                 task_status = task_status_inputs[i].value;
             }
         }
@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
      element = event.target;
      if (element.className === 'remove'){
          element.parentElement.remove();
-         tasks.remove(element);
+         //tasks.remove(element);
      }
-     if (element.className === 'mark-complete'){
+     if (element.className === 'mark-complete' || element.className === 'completed'){
          //document.querySelector('#task-title').strike();
-         document.querySelector('.new-task-html').style.textDecoration = "line-through";
+         element.parentElement.querySelector('.new-task-html').style.textDecoration = "line-through";
          element.task_status = "completed";
      }
  })
